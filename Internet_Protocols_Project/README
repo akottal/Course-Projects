@@ -1,0 +1,1 @@
+This project adds additional data to each outgoing packet at IP level using Linux Kernel modules. And this data can be read at the receiving end by the receiver.
