@@ -1,0 +1,33 @@
+Xinu scheduling policy:
+
+Advantages:
+
+Simple and Quick
+No additional calculations are required while scheduling.
+
+Disadvantages:
+
+Starvation is possible.
+
+
+Linux like scheduling policy:
+
+Advantages:
+
+Fair share of CPU given to each process based on the priority.
+No risk of starvation.
+
+Disadvantages:
+
+Complex calculations are involved while calculating goodness and quantum for the processes.
+
+Multi queue scheduling process:
+
+Advantages:
+
+Fair share of CPU given to each process based on the priority, and also real time processes and normal processes are treated differently.
+No risk of starvation.
+
+Disadvantages:
+
+Along with the calculations for goodness and quantum, switching between the queues is an additional overhead.
