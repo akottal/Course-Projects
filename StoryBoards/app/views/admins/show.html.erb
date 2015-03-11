@@ -1,0 +1,32 @@
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Admin Details</h1>
+    </div>
+    </div>
+  </div>
+<br/><br/>
+<div class="container bs-docs-container">
+
+<p id="notice"><%= notice %></p>
+  <%= render 'layouts/tail'%>
+  <p>
+            <h4>Name:</h4>
+                 <pre><%= @admin.name %>
+                </pre>
+  </p>
+  <p>
+            <h4>Email:</h4>
+            <pre><%= @admin.email %>
+            </pre>
+  </p>
+<p>
+  <h4>Password:</h4>
+  <%= @admin.password %>
+</p>
+
+  <%= link_to 'Edit', edit_admin_path(@admin),class:"btn btn-default" %>
+  <br/><br/>
+  <%= render 'layouts/tail'%>
+
+</div>

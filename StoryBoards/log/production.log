@@ -1,0 +1,411 @@
+I, [2015-02-13T20:11:34.879504 #18291]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 20:11:34 -0500
+I, [2015-02-13T20:11:34.905307 #18291]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T20:11:34.938425 #18291]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.9ms)
+I, [2015-02-13T20:11:34.939297 #18291]  INFO -- : Completed 200 OK in 34ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+I, [2015-02-13T20:13:34.530055 #18291]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:13:34 -0500
+I, [2015-02-13T20:13:34.532996 #18291]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:13:34.533173 #18291]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zBquGmaQVgDo7Kq9w8B10ho6C2k646Ow2A1rT76xm8qwqwzTbl42kT+qEgT3xn1hbpYwUoTNI2856KeTIGDA6Q==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+E, [2015-02-13T20:13:34.535490 #18291] ERROR -- : PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+I, [2015-02-13T20:13:34.535709 #18291]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2015-02-13T20:13:34.537026 #18291] FATAL -- : 
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+I, [2015-02-13T20:14:34.529224 #18291]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:14:34 -0500
+I, [2015-02-13T20:14:34.531486 #18291]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:14:34.531704 #18291]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zBquGmaQVgDo7Kq9w8B10ho6C2k646Ow2A1rT76xm8qwqwzTbl42kT+qEgT3xn1hbpYwUoTNI2856KeTIGDA6Q==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+E, [2015-02-13T20:14:34.534550 #18291] ERROR -- : PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+I, [2015-02-13T20:14:34.534889 #18291]  INFO -- : Completed 500 Internal Server Error in 3ms
+F, [2015-02-13T20:14:34.538287 #18291] FATAL -- : 
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+I, [2015-02-13T20:25:25.890760 #18834]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 20:25:25 -0500
+I, [2015-02-13T20:25:26.181421 #18834]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T20:25:26.214229 #18834]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.7ms)
+I, [2015-02-13T20:25:26.215180 #18834]  INFO -- : Completed 200 OK in 34ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+I, [2015-02-13T20:25:28.619271 #18834]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:25:28 -0500
+I, [2015-02-13T20:25:28.622194 #18834]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:25:28.622539 #18834]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+iK1k3SvCFZT9+RfCu8CVRIt+z+koubsy9wBvAF1NOV9srW/P1INHdZUFsjvlUaJf3fcEWxKdGIA7qpIBC4Xpg==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+E, [2015-02-13T20:25:28.693288 #18834] ERROR -- : PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+I, [2015-02-13T20:25:28.694167 #18834]  INFO -- : Completed 500 Internal Server Error in 71ms
+F, [2015-02-13T20:25:28.695562 #18834] FATAL -- : 
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "admins" does not exist
+LINE 5:                WHERE a.attrelid = '"admins"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"admins"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+I, [2015-02-13T20:36:28.714087 #19294]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 20:36:28 -0500
+I, [2015-02-13T20:36:28.793711 #19294]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T20:36:28.851512 #19294]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.6ms)
+I, [2015-02-13T20:36:28.852371 #19294]  INFO -- : Completed 200 OK in 58ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+D, [2015-02-13T20:45:04.238871 #19524] DEBUG -- :   [1m[36m (330.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+D, [2015-02-13T20:45:04.404846 #19524] DEBUG -- :   [1m[35m (81.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+D, [2015-02-13T20:45:04.416410 #19524] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (9.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-02-13T20:45:04.490257 #19524]  INFO -- : Migrating to CreateProjects (20150131145938)
+D, [2015-02-13T20:45:04.500431 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:04.891961 #19524] DEBUG -- :   [1m[36m (389.0ms)[0m  [1mCREATE TABLE "projects" ("id" serial primary key, "title" character varying, "description" text, "developers" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2015-02-13T20:45:04.930708 #19524] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150131145938"]]
+D, [2015-02-13T20:45:04.972912 #19524] DEBUG -- :   [1m[36m (41.6ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:04.973035 #19524]  INFO -- : Migrating to CreateStories (20150131222759)
+D, [2015-02-13T20:45:04.973915 #19524] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.257783 #19524] DEBUG -- :   [1m[36m (283.2ms)[0m  [1mCREATE TABLE "stories" ("id" serial primary key, "title" character varying, "description" text, "point_value" float, "stage" character varying, "project_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2015-02-13T20:45:05.297003 #19524] DEBUG -- :   [1m[35mSQL (37.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150131222759"]]
+D, [2015-02-13T20:45:05.346246 #19524] DEBUG -- :   [1m[36m (48.9ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:05.346381 #19524]  INFO -- : Migrating to CreateAdmins (20150131222857)
+D, [2015-02-13T20:45:05.347265 #19524] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.623472 #19524] DEBUG -- :   [1m[36m (275.5ms)[0m  [1mCREATE TABLE "admins" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2015-02-13T20:45:05.625326 #19524] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150131222857"]]
+D, [2015-02-13T20:45:05.656552 #19524] DEBUG -- :   [1m[36m (30.9ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:05.656672 #19524]  INFO -- : Migrating to CreateDevelopers (20150131223319)
+D, [2015-02-13T20:45:05.704707 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.891939 #19524] DEBUG -- :   [1m[36m (186.4ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "story_id" integer, "project_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2015-02-13T20:45:05.893753 #19524] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150131223319"]]
+D, [2015-02-13T20:45:05.911528 #19524] DEBUG -- :   [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:05.911717 #19524]  INFO -- : Migrating to AddPasswordDigestToAdmins (20150204050705)
+D, [2015-02-13T20:45:05.912954 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.914698 #19524] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mALTER TABLE "admins" ADD "password_digest" character varying[0m
+D, [2015-02-13T20:45:05.917780 #19524] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150204050705"]]
+D, [2015-02-13T20:45:05.944731 #19524] DEBUG -- :   [1m[36m (26.5ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:05.944948 #19524]  INFO -- : Migrating to AddPasswordDigestToDevelopers (20150204050846)
+D, [2015-02-13T20:45:05.946314 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.948127 #19524] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mALTER TABLE "developers" ADD "password_digest" character varying[0m
+D, [2015-02-13T20:45:05.951741 #19524] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150204050846"]]
+D, [2015-02-13T20:45:05.955517 #19524] DEBUG -- :   [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:05.955694 #19524]  INFO -- : Migrating to RemovePasswordFromAdmins (20150204052301)
+D, [2015-02-13T20:45:05.956521 #19524] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-02-13T20:45:05.990428 #19524] DEBUG -- :   [1m[36m (33.4ms)[0m  [1mALTER TABLE "admins" DROP "password"[0m
+D, [2015-02-13T20:45:05.994733 #19524] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150204052301"]]
+D, [2015-02-13T20:45:06.011136 #19524] DEBUG -- :   [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:06.011356 #19524]  INFO -- : Migrating to RemovePasswordFromDevelopers (20150204052403)
+D, [2015-02-13T20:45:06.012929 #19524] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2015-02-13T20:45:06.014728 #19524] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mALTER TABLE "developers" DROP "password"[0m
+D, [2015-02-13T20:45:06.018998 #19524] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150204052403"]]
+D, [2015-02-13T20:45:06.033276 #19524] DEBUG -- :   [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:06.033548 #19524]  INFO -- : Migrating to AddDevIdToStory (20150212193557)
+D, [2015-02-13T20:45:06.034859 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:06.036283 #19524] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mALTER TABLE "stories" ADD "dev_id" integer[0m
+D, [2015-02-13T20:45:06.039842 #19524] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150212193557"]]
+D, [2015-02-13T20:45:06.044333 #19524] DEBUG -- :   [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:06.044545 #19524]  INFO -- : Migrating to AddDeveloperIdToStory (20150212193713)
+D, [2015-02-13T20:45:06.045866 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:06.047862 #19524] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mALTER TABLE "stories" ADD "developer_id" integer[0m
+D, [2015-02-13T20:45:06.052376 #19524] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150212193713"]]
+D, [2015-02-13T20:45:06.066518 #19524] DEBUG -- :   [1m[36m (13.5ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:06.066785 #19524]  INFO -- : Migrating to AddBurndownToProject (20150213062027)
+D, [2015-02-13T20:45:06.068106 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:06.069625 #19524] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mALTER TABLE "projects" ADD "burndown" character varying[0m
+D, [2015-02-13T20:45:06.072925 #19524] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150213062027"]]
+D, [2015-02-13T20:45:06.077591 #19524] DEBUG -- :   [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+I, [2015-02-13T20:45:06.077848 #19524]  INFO -- : Migrating to AddBtimeToProject (20150213073959)
+D, [2015-02-13T20:45:06.079875 #19524] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-02-13T20:45:06.082040 #19524] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mALTER TABLE "projects" ADD "btime" integer[0m
+D, [2015-02-13T20:45:06.086447 #19524] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150213073959"]]
+D, [2015-02-13T20:45:06.099820 #19524] DEBUG -- :   [1m[36m (12.7ms)[0m  [1mCOMMIT[0m
+D, [2015-02-13T20:45:18.933277 #19531] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2015-02-13T20:45:19.159337 #19531] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-02-13T20:45:19.166231 #19531] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "admins" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "admin"], ["email", "admin@ncsu.edu"], ["password_digest", "$2a$10$yb6UKr3.dv.6dC8veGHsK.VPafSaUe2hnyy1tpkeh0pNoro1HdTQ6"], ["created_at", "2015-02-14 01:45:19.161884"], ["updated_at", "2015-02-14 01:45:19.161884"]]
+D, [2015-02-13T20:45:19.173391 #19531] DEBUG -- :   [1m[35m (6.5ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.214304 #19531] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.217453 #19531] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "projects" ("title", "description", "burndown", "btime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Project 1"], ["description", "This is project 1"], ["burndown", "---\n- 10\n- 20\n- 30\n"], ["btime", 3], ["created_at", "2015-02-14 01:45:19.214734"], ["updated_at", "2015-02-14 01:45:19.214734"]]
+D, [2015-02-13T20:45:19.228687 #19531] DEBUG -- :   [1m[36m (10.0ms)[0m  [1mCOMMIT[0m
+D, [2015-02-13T20:45:19.231304 #19531] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2015-02-13T20:45:19.233566 #19531] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("title", "description", "burndown", "btime", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Project 2"], ["description", "This is project 2"], ["burndown", "---\n- 10\n- 20\n- 30\n"], ["btime", 3], ["created_at", "2015-02-14 01:45:19.231550"], ["updated_at", "2015-02-14 01:45:19.231550"]]
+D, [2015-02-13T20:45:19.239805 #19531] DEBUG -- :   [1m[35m (5.1ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.382911 #19531] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.385288 #19531] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "developers" ("name", "email", "password_digest", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "dev1"], ["email", "dev1@ncsu.edu"], ["password_digest", "$2a$10$XXKdiLQKkkYAEN3596GlRu80z/5HpGfwmeKjGNwuPkGQrdkzgIFjq"], ["project_id", 1], ["created_at", "2015-02-14 01:45:19.383447"], ["updated_at", "2015-02-14 01:45:19.383447"]]
+D, [2015-02-13T20:45:19.394969 #19531] DEBUG -- :   [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+D, [2015-02-13T20:45:19.521286 #19531] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-02-13T20:45:19.522968 #19531] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "developers" ("name", "email", "password_digest", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "dev2"], ["email", "dev2@ncsu.edu"], ["password_digest", "$2a$10$wqSwXx2ekkWziCHXlEtvN.wD4xNAobpro6I0HyyDP8GldvFIuq1IW"], ["project_id", 2], ["created_at", "2015-02-14 01:45:19.521696"], ["updated_at", "2015-02-14 01:45:19.521696"]]
+D, [2015-02-13T20:45:19.527496 #19531] DEBUG -- :   [1m[35m (4.0ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.539801 #19531] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.580175 #19531] DEBUG -- :   [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:45:19.582652 #19531] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 1"], ["description", "This is story 1"], ["project_id", 1], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 1], ["created_at", "2015-02-14 01:45:19.580906"], ["updated_at", "2015-02-14 01:45:19.580906"]]
+D, [2015-02-13T20:45:19.594160 #19531] DEBUG -- :   [1m[35m (10.8ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.596339 #19531] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.597899 #19531] DEBUG -- :   [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:45:19.600949 #19531] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 2"], ["description", "This is story 2"], ["project_id", 1], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 1], ["created_at", "2015-02-14 01:45:19.598718"], ["updated_at", "2015-02-14 01:45:19.598718"]]
+D, [2015-02-13T20:45:19.605077 #19531] DEBUG -- :   [1m[35m (3.1ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.607048 #19531] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.608521 #19531] DEBUG -- :   [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:45:19.611560 #19531] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 3"], ["description", "This is story 3"], ["project_id", 1], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 1], ["created_at", "2015-02-14 01:45:19.609324"], ["updated_at", "2015-02-14 01:45:19.609324"]]
+D, [2015-02-13T20:45:19.616306 #19531] DEBUG -- :   [1m[35m (3.7ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.618531 #19531] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.620093 #19531] DEBUG -- :   [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2015-02-13T20:45:19.623173 #19531] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 4"], ["description", "This is story 4"], ["project_id", 2], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 2], ["created_at", "2015-02-14 01:45:19.620827"], ["updated_at", "2015-02-14 01:45:19.620827"]]
+D, [2015-02-13T20:45:19.627280 #19531] DEBUG -- :   [1m[35m (2.9ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.629463 #19531] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.631166 #19531] DEBUG -- :   [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2015-02-13T20:45:19.634573 #19531] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 5"], ["description", "This is story 5"], ["project_id", 2], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 2], ["created_at", "2015-02-14 01:45:19.631998"], ["updated_at", "2015-02-14 01:45:19.631998"]]
+D, [2015-02-13T20:45:19.649622 #19531] DEBUG -- :   [1m[35m (13.7ms)[0m  COMMIT
+D, [2015-02-13T20:45:19.652141 #19531] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-02-13T20:45:19.653994 #19531] DEBUG -- :   [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2015-02-13T20:45:19.657615 #19531] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stories" ("title", "description", "project_id", "stage", "point_value", "developer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Story 6"], ["description", "This is story 6"], ["project_id", 2], ["stage", "Analysis"], ["point_value", 100.0], ["developer_id", 2], ["created_at", "2015-02-14 01:45:19.655031"], ["updated_at", "2015-02-14 01:45:19.655031"]]
+D, [2015-02-13T20:45:19.671537 #19531] DEBUG -- :   [1m[35m (12.8ms)[0m  COMMIT
+I, [2015-02-13T20:46:00.617992 #19545]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 20:46:00 -0500
+I, [2015-02-13T20:46:00.644055 #19545]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T20:46:00.882796 #19545]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (131.9ms)
+I, [2015-02-13T20:46:00.883661 #19545]  INFO -- : Completed 200 OK in 239ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+I, [2015-02-13T20:46:06.237412 #19545]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:46:06 -0500
+I, [2015-02-13T20:46:06.238977 #19545]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:46:06.250830 #19545]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"4tK6ltcZEDfyG/d3OOS8Pq5z98NQ4/gp0GJR7XindxtlQrq6nOQVfHe4BeDdnvjiwynQ7ZgLaqcbUPoZffxUWA==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+D, [2015-02-13T20:46:06.261565 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T20:46:06.389878 #19545]  INFO -- : Redirected to http://localhost:3000/admins
+I, [2015-02-13T20:46:06.390122 #19545]  INFO -- : Completed 302 Found in 139ms (ActiveRecord: 4.5ms)
+I, [2015-02-13T20:46:06.431804 #19545]  INFO -- : Started GET "/admins" for 127.0.0.1 at 2015-02-13 20:46:06 -0500
+I, [2015-02-13T20:46:06.434052 #19545]  INFO -- : Processing by AdminsController#index as HTML
+D, [2015-02-13T20:46:06.435395 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:46:06.435843 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:46:06.455497 #19545] DEBUG -- :   [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins"
+D, [2015-02-13T20:46:06.457851 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+D, [2015-02-13T20:46:06.467237 #19545] DEBUG -- :   [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"
+I, [2015-02-13T20:46:06.476404 #19545]  INFO -- :   Rendered admins/index.html.erb within layouts/application (22.9ms)
+I, [2015-02-13T20:46:06.476847 #19545]  INFO -- : Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 3.9ms)
+I, [2015-02-13T20:55:43.436099 #19545]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 20:55:43 -0500
+I, [2015-02-13T20:55:43.439645 #19545]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T20:55:43.446063 #19545]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (2.2ms)
+I, [2015-02-13T20:55:43.446649 #19545]  INFO -- : Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2015-02-13T20:55:45.738598 #19545]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:55:45 -0500
+I, [2015-02-13T20:55:45.740563 #19545]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:55:45.740754 #19545]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mHdciNh/basvNM2vBMpk6LfyjoSPpGiAHmY1ptpv3J58d1eaJz4/SkfIaFZaW1Pz4XtFNrWAyzLSzMinjKcMQ==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+D, [2015-02-13T20:55:45.743066 #19545] DEBUG -- :   [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T20:55:45.865597 #19545]  INFO -- : Redirected to http://localhost:3000/admins
+I, [2015-02-13T20:55:45.865814 #19545]  INFO -- : Completed 302 Found in 125ms (ActiveRecord: 0.5ms)
+I, [2015-02-13T20:55:45.872171 #19545]  INFO -- : Started GET "/admins" for 127.0.0.1 at 2015-02-13 20:55:45 -0500
+I, [2015-02-13T20:55:45.873209 #19545]  INFO -- : Processing by AdminsController#index as HTML
+D, [2015-02-13T20:55:45.874290 #19545] DEBUG -- :   [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:55:45.874720 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:55:45.876032 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins"
+D, [2015-02-13T20:55:45.877515 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+D, [2015-02-13T20:55:45.879476 #19545] DEBUG -- :   [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+I, [2015-02-13T20:55:45.880969 #19545]  INFO -- :   Rendered admins/index.html.erb within layouts/application (5.5ms)
+I, [2015-02-13T20:55:45.881309 #19545]  INFO -- : Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+I, [2015-02-13T20:55:47.400835 #19545]  INFO -- : Started GET "/projects/new" for 127.0.0.1 at 2015-02-13 20:55:47 -0500
+I, [2015-02-13T20:55:47.404706 #19545]  INFO -- : Processing by ProjectsController#new as HTML
+D, [2015-02-13T20:55:47.407258 #19545] DEBUG -- :   [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T20:55:47.436949 #19545]  INFO -- :   Rendered projects/_form.html.erb (4.8ms)
+I, [2015-02-13T20:55:47.437243 #19545]  INFO -- :   Rendered projects/new.html.erb within layouts/application (15.3ms)
+I, [2015-02-13T20:55:47.437598 #19545]  INFO -- : Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+I, [2015-02-13T20:55:48.847580 #19545]  INFO -- : Started GET "/projects" for 127.0.0.1 at 2015-02-13 20:55:48 -0500
+I, [2015-02-13T20:55:48.849203 #19545]  INFO -- : Processing by ProjectsController#index as HTML
+D, [2015-02-13T20:55:48.850685 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:55:48.851997 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+D, [2015-02-13T20:55:48.868839 #19545] DEBUG -- :   [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"
+I, [2015-02-13T20:55:48.872249 #19545]  INFO -- :   Rendered projects/index.html.erb within layouts/application (6.0ms)
+I, [2015-02-13T20:55:48.872621 #19545]  INFO -- : Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+I, [2015-02-13T20:56:44.536226 #19545]  INFO -- : Started GET "/developers/new" for 127.0.0.1 at 2015-02-13 20:56:44 -0500
+I, [2015-02-13T20:56:44.538603 #19545]  INFO -- : Processing by DevelopersController#new as HTML
+D, [2015-02-13T20:56:44.539863 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:56:44.540333 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T20:56:44.566280 #19545] DEBUG -- :   [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+I, [2015-02-13T20:56:44.568833 #19545]  INFO -- :   Rendered developers/_form.html.erb (6.4ms)
+I, [2015-02-13T20:56:44.569147 #19545]  INFO -- :   Rendered developers/new.html.erb within layouts/application (24.4ms)
+I, [2015-02-13T20:56:44.569474 #19545]  INFO -- : Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+I, [2015-02-13T20:56:59.187916 #19545]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 20:56:59 -0500
+I, [2015-02-13T20:56:59.189475 #19545]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T20:56:59.189603 #19545]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mHdciNh/basvNM2vBMpk6LfyjoSPpGiAHmY1ptpv3J58d1eaJz4/SkfIaFZaW1Pz4XtFNrWAyzLSzMinjKcMQ==", "session"=>{"email"=>"dev1@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+D, [2015-02-13T20:56:59.191238 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:56:59.192849 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+I, [2015-02-13T20:56:59.313746 #19545]  INFO -- : Redirected to http://localhost:3000/developers/1
+I, [2015-02-13T20:56:59.314001 #19545]  INFO -- : Completed 302 Found in 124ms (ActiveRecord: 0.4ms)
+I, [2015-02-13T20:56:59.378630 #19545]  INFO -- : Started GET "/developers/1" for 127.0.0.1 at 2015-02-13 20:56:59 -0500
+I, [2015-02-13T20:56:59.379864 #19545]  INFO -- : Processing by DevelopersController#show as HTML
+I, [2015-02-13T20:56:59.379941 #19545]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-02-13T20:56:59.381672 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:56:59.382393 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:56:59.382918 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:56:59.383350 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+D, [2015-02-13T20:56:59.383626 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:56:59.384897 #19545] DEBUG -- :   [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2015-02-13T20:56:59.386265 #19545] DEBUG -- :   [1m[35mStory Load (0.5ms)[0m  SELECT "stories".* FROM "stories"
+I, [2015-02-13T20:56:59.415697 #19545]  INFO -- :   Rendered developers/show.html.erb within layouts/application (2.8ms)
+I, [2015-02-13T20:56:59.416105 #19545]  INFO -- : Completed 200 OK in 36ms (Views: 20.6ms | ActiveRecord: 2.4ms)
+I, [2015-02-13T20:57:05.320141 #19545]  INFO -- : Started GET "/projects/1" for 127.0.0.1 at 2015-02-13 20:57:05 -0500
+I, [2015-02-13T20:57:05.321480 #19545]  INFO -- : Processing by ProjectsController#show as HTML
+I, [2015-02-13T20:57:05.321620 #19545]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-02-13T20:57:05.322979 #19545] DEBUG -- :   [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2015-02-13T20:57:05.323735 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "1"]]
+D, [2015-02-13T20:57:05.327628 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:05.328099 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:05.328857 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:05.330012 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.3ms)[0m  SELECT "developers".* FROM "developers"
+D, [2015-02-13T20:57:05.331341 #19545] DEBUG -- :   [1m[36mStory Load (0.4ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+I, [2015-02-13T20:57:05.349636 #19545]  INFO -- :   Rendered projects/show.html.erb within layouts/application (6.0ms)
+I, [2015-02-13T20:57:05.350160 #19545]  INFO -- : Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 1.6ms)
+I, [2015-02-13T20:57:12.991025 #19545]  INFO -- : Started GET "/projects" for 127.0.0.1 at 2015-02-13 20:57:12 -0500
+I, [2015-02-13T20:57:12.992163 #19545]  INFO -- : Processing by ProjectsController#index as HTML
+D, [2015-02-13T20:57:12.993228 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:12.993739 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:12.994225 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+I, [2015-02-13T20:57:12.995136 #19545]  INFO -- : Redirected to http://localhost:3000/developers/1
+D, [2015-02-13T20:57:12.996303 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+I, [2015-02-13T20:57:12.997304 #19545]  INFO -- : Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+I, [2015-02-13T20:57:13.003700 #19545]  INFO -- : Started GET "/developers/1" for 127.0.0.1 at 2015-02-13 20:57:13 -0500
+I, [2015-02-13T20:57:13.004878 #19545]  INFO -- : Processing by DevelopersController#show as HTML
+I, [2015-02-13T20:57:13.004966 #19545]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-02-13T20:57:13.005967 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:57:13.006584 #19545] DEBUG -- :   [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:13.007060 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.1ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:13.007410 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+D, [2015-02-13T20:57:13.007683 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:13.008184 #19545] DEBUG -- :   [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2015-02-13T20:57:13.009119 #19545] DEBUG -- :   [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+I, [2015-02-13T20:57:13.011373 #19545]  INFO -- :   Rendered developers/show.html.erb within layouts/application (1.2ms)
+I, [2015-02-13T20:57:13.011717 #19545]  INFO -- : Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+I, [2015-02-13T20:57:21.395045 #19545]  INFO -- : Started GET "/projects" for 127.0.0.1 at 2015-02-13 20:57:21 -0500
+I, [2015-02-13T20:57:21.396152 #19545]  INFO -- : Processing by ProjectsController#index as HTML
+D, [2015-02-13T20:57:21.397157 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:21.397602 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:21.398028 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+I, [2015-02-13T20:57:21.398814 #19545]  INFO -- : Redirected to http://localhost:3000/developers/1
+D, [2015-02-13T20:57:21.399677 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.3ms)[0m  SELECT "developers".* FROM "developers"
+I, [2015-02-13T20:57:21.400410 #19545]  INFO -- : Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+I, [2015-02-13T20:57:21.406842 #19545]  INFO -- : Started GET "/developers/1" for 127.0.0.1 at 2015-02-13 20:57:21 -0500
+I, [2015-02-13T20:57:21.407877 #19545]  INFO -- : Processing by DevelopersController#show as HTML
+I, [2015-02-13T20:57:21.407942 #19545]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-02-13T20:57:21.408888 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2015-02-13T20:57:21.409536 #19545] DEBUG -- :   [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:21.409997 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.1ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:21.410369 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1  [["id", "1"]]
+D, [2015-02-13T20:57:21.410637 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:57:21.411232 #19545] DEBUG -- :   [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:57:21.412426 #19545] DEBUG -- :   [1m[36mStory Load (0.4ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+I, [2015-02-13T20:57:21.414784 #19545]  INFO -- :   Rendered developers/show.html.erb within layouts/application (1.2ms)
+I, [2015-02-13T20:57:21.415148 #19545]  INFO -- : Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+I, [2015-02-13T20:59:46.871324 #19545]  INFO -- : Started GET "/admins" for 127.0.0.1 at 2015-02-13 20:59:46 -0500
+I, [2015-02-13T20:59:46.873245 #19545]  INFO -- : Processing by AdminsController#index as HTML
+D, [2015-02-13T20:59:46.875179 #19545] DEBUG -- :   [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:59:46.876229 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:59:46.877241 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+I, [2015-02-13T20:59:46.878349 #19545]  INFO -- : Redirected to http://localhost:3000/developers/1
+I, [2015-02-13T20:59:46.879127 #19545]  INFO -- : Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+I, [2015-02-13T20:59:46.892971 #19545]  INFO -- : Started GET "/developers/1" for 127.0.0.1 at 2015-02-13 20:59:46 -0500
+I, [2015-02-13T20:59:46.895063 #19545]  INFO -- : Processing by DevelopersController#show as HTML
+I, [2015-02-13T20:59:46.895266 #19545]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-02-13T20:59:46.898186 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2015-02-13T20:59:46.899528 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:59:46.900284 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.2ms)[0m  [1mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:59:46.900749 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT 1  [["id", "1"]]
+D, [2015-02-13T20:59:46.901023 #19545] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "dev1@ncsu.edu"]]
+D, [2015-02-13T20:59:46.901607 #19545] DEBUG -- :   [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2015-02-13T20:59:46.902512 #19545] DEBUG -- :   [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+I, [2015-02-13T20:59:46.905295 #19545]  INFO -- :   Rendered developers/show.html.erb within layouts/application (1.7ms)
+I, [2015-02-13T20:59:46.905609 #19545]  INFO -- : Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 1.5ms)
+I, [2015-02-13T21:06:44.833943 #19545]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-02-13 21:06:44 -0500
+I, [2015-02-13T21:06:44.835720 #19545]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-02-13T21:06:44.838402 #19545]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.5ms)
+I, [2015-02-13T21:06:44.838804 #19545]  INFO -- : Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+I, [2015-02-13T21:06:47.033679 #19545]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-02-13 21:06:47 -0500
+I, [2015-02-13T21:06:47.034695 #19545]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-02-13T21:06:47.034803 #19545]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"5l8KjPN8SfJN7KfGAxbotP74qwi86wKdcnO2IFSDOGhhzwqguIFMuchPVVHmbKxok6KMJnQDkBO5QR3UUdgbKw==", "session"=>{"email"=>"admin@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+D, [2015-02-13T21:06:47.035963 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T21:06:47.156377 #19545]  INFO -- : Redirected to http://localhost:3000/admins
+I, [2015-02-13T21:06:47.156575 #19545]  INFO -- : Completed 302 Found in 122ms (ActiveRecord: 0.2ms)
+I, [2015-02-13T21:06:47.162226 #19545]  INFO -- : Started GET "/admins" for 127.0.0.1 at 2015-02-13 21:06:47 -0500
+I, [2015-02-13T21:06:47.163344 #19545]  INFO -- : Processing by AdminsController#index as HTML
+D, [2015-02-13T21:06:47.164397 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T21:06:47.164788 #19545] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T21:06:47.166111 #19545] DEBUG -- :   [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins"[0m
+D, [2015-02-13T21:06:47.167743 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT "developers".* FROM "developers"
+D, [2015-02-13T21:06:47.169542 #19545] DEBUG -- :   [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+I, [2015-02-13T21:06:47.170982 #19545]  INFO -- :   Rendered admins/index.html.erb within layouts/application (5.4ms)
+I, [2015-02-13T21:06:47.171343 #19545]  INFO -- : Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.9ms)
+I, [2015-02-13T21:06:50.184590 #19545]  INFO -- : Started GET "/projects/new" for 127.0.0.1 at 2015-02-13 21:06:50 -0500
+I, [2015-02-13T21:06:50.187066 #19545]  INFO -- : Processing by ProjectsController#new as HTML
+D, [2015-02-13T21:06:50.188117 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T21:06:50.191991 #19545]  INFO -- :   Rendered projects/_form.html.erb (2.8ms)
+I, [2015-02-13T21:06:50.192556 #19545]  INFO -- :   Rendered projects/new.html.erb within layouts/application (3.5ms)
+I, [2015-02-13T21:06:50.193079 #19545]  INFO -- : Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+I, [2015-02-13T21:06:51.730206 #19545]  INFO -- : Started GET "/projects" for 127.0.0.1 at 2015-02-13 21:06:51 -0500
+I, [2015-02-13T21:06:51.732201 #19545]  INFO -- : Processing by ProjectsController#index as HTML
+D, [2015-02-13T21:06:51.734168 #19545] DEBUG -- :   [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T21:06:51.735355 #19545] DEBUG -- :   [1m[35mDeveloper Load (0.2ms)[0m  SELECT "developers".* FROM "developers"
+D, [2015-02-13T21:06:51.736891 #19545] DEBUG -- :   [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+I, [2015-02-13T21:06:51.740567 #19545]  INFO -- :   Rendered projects/index.html.erb within layouts/application (4.3ms)
+I, [2015-02-13T21:06:51.741582 #19545]  INFO -- : Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.9ms)
+I, [2015-02-13T21:06:59.399761 #19545]  INFO -- : Started GET "/projects" for 127.0.0.1 at 2015-02-13 21:06:59 -0500
+I, [2015-02-13T21:06:59.401588 #19545]  INFO -- : Processing by ProjectsController#index as HTML
+D, [2015-02-13T21:06:59.403231 #19545] DEBUG -- :   [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+D, [2015-02-13T21:06:59.404156 #19545] DEBUG -- :   [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+D, [2015-02-13T21:06:59.406120 #19545] DEBUG -- :   [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+I, [2015-02-13T21:06:59.409266 #19545]  INFO -- :   Rendered projects/index.html.erb within layouts/application (4.1ms)
+I, [2015-02-13T21:06:59.409622 #19545]  INFO -- : Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.9ms)
+I, [2015-02-13T21:07:32.560235 #19545]  INFO -- : Started GET "/projects/new" for 127.0.0.1 at 2015-02-13 21:07:32 -0500
+I, [2015-02-13T21:07:32.561357 #19545]  INFO -- : Processing by ProjectsController#new as HTML
+D, [2015-02-13T21:07:32.562483 #19545] DEBUG -- :   [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T21:07:32.568219 #19545]  INFO -- :   Rendered projects/_form.html.erb (3.8ms)
+I, [2015-02-13T21:07:32.568607 #19545]  INFO -- :   Rendered projects/new.html.erb within layouts/application (4.5ms)
+I, [2015-02-13T21:07:32.569051 #19545]  INFO -- : Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+I, [2015-02-13T21:07:47.947650 #19545]  INFO -- : Started GET "/projects/new" for 127.0.0.1 at 2015-02-13 21:07:47 -0500
+I, [2015-02-13T21:07:47.950434 #19545]  INFO -- : Processing by ProjectsController#new as HTML
+D, [2015-02-13T21:07:47.953996 #19545] DEBUG -- :   [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T21:07:47.958357 #19545]  INFO -- :   Rendered projects/_form.html.erb (2.9ms)
+I, [2015-02-13T21:07:47.958661 #19545]  INFO -- :   Rendered projects/new.html.erb within layouts/application (3.4ms)
+I, [2015-02-13T21:07:47.959033 #19545]  INFO -- : Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+I, [2015-02-13T21:07:48.361232 #19545]  INFO -- : Started GET "/projects/new" for 127.0.0.1 at 2015-02-13 21:07:48 -0500
+I, [2015-02-13T21:07:48.363925 #19545]  INFO -- : Processing by ProjectsController#new as HTML
+D, [2015-02-13T21:07:48.366581 #19545] DEBUG -- :   [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT 1[0m  [["email", "admin@ncsu.edu"]]
+I, [2015-02-13T21:07:48.375129 #19545]  INFO -- :   Rendered projects/_form.html.erb (6.7ms)
+I, [2015-02-13T21:07:48.375408 #19545]  INFO -- :   Rendered projects/new.html.erb within layouts/application (7.2ms)
+I, [2015-02-13T21:07:48.375721 #19545]  INFO -- : Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.5ms)

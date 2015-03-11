@@ -1,0 +1,106 @@
+<p id="notice"><%= notice %></p>
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Admin Home Page</h1>
+    </div>
+  </div>
+</div><br/>
+<div class="container bs-docs-container">
+  <br/><br/>
+  <%= render 'layouts/tail'%>
+<h2>Listing Admins</h2>
+<table class="table" border="1px">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @admins.each do |admin| %>
+      <tr>
+        <td><%= admin.name %></td>
+        <td><%= admin.email %></td>
+        <td><strong><%= link_to 'Show', admin , class:"btn btn-primary",style:"color: white"%></strong></td>
+        <td><strong><%= link_to 'Edit', edit_admin_path(admin), class:"btn btn-default" %></strong></td>
+        <td><%= button_to "Delete", admin, :method=>:delete, :class=>:destroy, class:"btn btn-warning" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+<%= link_to 'Add New Admin', new_admin_path, class:"btn btn-default" %>
+
+
+</div>
+<div class="container bs-docs-container">
+
+<br/>
+<br/>
+
+<h2> Listing Developers</h2>
+<table class="table" border="1px">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @developers.each do |developer| %>
+      <tr>
+        <td><%= developer.name %></td>
+        <td><%= developer.email %></td>
+        <td><strong><%= link_to 'Show', developer , class:"btn btn-primary" ,style:"color: white"%></strong></td>
+        <td><strong><%= link_to 'Edit', edit_developer_path(developer), class:"btn btn-default" %></strong></td>
+        <td><%= button_to "Delete", developer, :method=>:delete, :class=>:destroy, class:"btn btn-warning" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+  <%= link_to 'Add New Developer', new_developer_path , class:"btn btn-default" %>
+
+
+  </div>
+<div class="container bs-docs-container">
+<br/>
+<br/>
+
+<h2> Listing Projects</h2>
+<table class="table" border="1px">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td><strong><%= link_to 'Show', project, class:"btn btn-primary" ,style:"color: white"%></strong></td>
+        <td><strong><%= link_to 'Edit', edit_project_path(project), class:"btn btn-default" %></strong></td>
+        <td><%= button_to "Delete", project, :method=>:delete, :class=>:destroy, class:"btn btn-warning" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+  <%= link_to 'Add New Project', new_project_path , class:"btn btn-default"%>
+
+  <br/><br/><%= render 'layouts/tail'%>
+  </div>
+<br/><br/>

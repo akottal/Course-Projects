@@ -1,0 +1,106 @@
+<h3 id="notice"><%= notice %></h3>
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Developer Details</h1>
+    </div>
+  </div>
+</div>
+<br/><br/>
+
+<div class="container bs-docs-container">
+  <%= render 'layouts/tail'%>
+  <p>
+  <h4>Name:</h4>
+  <pre>
+  <%= @developer.name %>
+    </pre>
+</p>
+<p>
+  <h4>Email:</h4>
+  <pre>
+  <%= @developer.email %>
+  </pre>
+</p>
+<br/>
+ <%= link_to 'Edit Password', edit_developer_path(@developer),class:"btn btn-default" %>
+
+<br/>
+<h3>Project Assigned</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <% unless @project == nil%>
+        <td><%= @project.title %></td>
+        <td><%= @project.description%></td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+
+<br/><strong><%= link_to 'View Project Details', @project,class:"btn btn-default" %> to create or signup to stories</strong>
+
+<br/>
+<h3>Story Assigned</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Point Value</th>
+    <th>Stage</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <% unless @story == nil%>
+        <td><%= @story.title %></td>
+        <td><%= @story.description%></td>
+        <td><%= @story.point_value%></td>
+        <td><%= @story.stage%></td>
+        <td><strong><%= link_to 'Show', @story, class:"btn btn-primary",style:"color: white" %></strong></td>
+        <% end %>
+      </tr>
+  </tbody>
+</table>
+<br/>
+<br/>
+<h3>Stories Created</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Point Value</th>
+    <th>Stage</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @stories_created.each do |story|%>
+      <tr>
+        <td><%= story.title %></td>
+        <td><%= story.description%></td>
+        <td><%= story.point_value%></td>
+        <td><%= story.stage%></td>
+        <td><strong><%= link_to 'Show', story, class:"btn btn-primary",style:"color: white" %></strong></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+  <br/><br/>
+  <%= render 'layouts/tail'%>
+
+</div>

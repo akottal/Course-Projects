@@ -1,0 +1,44 @@
+<br/>
+<div class="row">
+<%= form_for(@admin) do |f| %>
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% @admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+      </div>
+  <div class="row">
+  <div class="col-lg-2">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+    <div class="col-lg-2">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+      </div><br/>
+          <div class="row">
+  <div class="col-lg-2">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+
+    <div class="col-lg-2">
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation %>
+    </div>
+          </div>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-lg-2">
+                 <%= f.submit %>
+                </div>
+            </div>
+<% end %>
+<br/><br/>

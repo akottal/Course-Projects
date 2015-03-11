@@ -1,0 +1,44 @@
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Stories Home Page</h1>
+    </div>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div class="container bs-docs-container">
+<%= render 'layouts/tail'%>
+<h1>Listing Stories</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Point value</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @stories.each do |story| %>
+      <tr>
+        <td><%= story.title %></td>
+        <td><%= story.description %></td>
+        <td><%= story.point_value %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path,class:"btn btn-default" %>
+<br/><br/>
+<%= render 'layouts/tail'%>
+    </div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--   stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' true  -->
+  <!-- javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+  <!-- csrf_meta_tags %>-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap.min", :media => "all" %>
+</head>
+
+<body>
+<div class="container bs-docs-container">
+  <% if @stories.empty? %>
+      <h3 style="color: red">No results found<br/></h3>
+  <% else %>
+    <table class="table" border="1px">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Point Value</th>
+        <th>Stage</th>
+        <th colspan="2">Options</th>
+      </tr>
+      </thead>
+
+      <h3>Story search results</h3>
+      <tbody>
+      <% @stories.each do |story| %>
+          <tr>
+            <td><%= story.title %></td>
+            <td><%= story.description%></td>
+            <td><%= story.point_value%></td>
+            <td><%= story.stage%></td>
+            <td><%= link_to 'Show', story %></td>
+            <td><%= link_to 'Edit', edit_story_path(story) %></td>
+          </tr>
+      <% end %>
+      </tbody>
+  <% end %>
+  <%= render 'layouts/tail'%>
+</table>
+    </div>
+</body>
+</html>

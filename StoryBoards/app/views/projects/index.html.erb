@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Projects Home Page</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container bs-docs-container">
+  <br/><br/>
+
+  <%= render 'layouts/tail'%>
+
+  <h2>Listing Projects</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Options</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= link_to 'Show', project, class:"btn btn-primary",style:"color: white" %></td>
+        <td><%= link_to 'Edit', edit_project_path(project), class:"btn btn-default"  %></td>
+        <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger",style:"color: white"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>List of Developers</h2>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @developers.inspect %>
+  <% @developers.each do |developer| %>
+      <tr>
+        <td><%= developer.name %></td>
+        <td><%= developer.email%></td>
+        <td><%= link_to 'Show', developer, class:"btn btn-primary",style:"color: white" %></td>
+        <td><%= link_to 'Edit', edit_developer_path(developer), class:"btn btn-default"  %></td>
+        <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger",style:"color: white" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>
+<br/>
+
+<%= link_to 'New Project', new_project_path, class:"btn btn-default" %>
+  <br/><br/>
+  <%= render 'layouts/tail'%>
+  </div>

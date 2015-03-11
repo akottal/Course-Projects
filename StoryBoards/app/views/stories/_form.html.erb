@@ -1,0 +1,53 @@
+<div class="row">
+<%= form_for(@story) do |f| %>
+    <% if @story.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+          <ul>
+            <% @story.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="col-lg-2">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+      <%= f.label :point_value %><br>
+      <%= f.text_field :point_value %>
+    </div>
+
+        <div class="col-lg-2">
+    <%= f.label :stage %>
+    <%= f.select :stage, @stages.collect { |c| [ c]} %>
+
+          </div>
+        </div><br/><br/>
+      <div class="row">
+        <div class="col-lg-2">
+    <%= f.label :project_id %><br/>
+    <%= select("story", "project_id", Project.all.collect{ |c| if c.id == @user.project_id  then [ c.title, c.id]  end}) %>
+
+          </div>
+      </div><br/><br/>
+      <div class="row">
+        <div class="col-lg-2">
+      <%= f.submit %>
+    </div>
+        </div>
+    <br/>
+<% end %>
+<br/><br/>

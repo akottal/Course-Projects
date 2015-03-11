@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="415431419">
+    <data-source source="LOCAL" name="Rails StoryBoards: development" uuid="97d8055e-ec15-430b-9c00-3314f124e328">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/StoryBoards_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails StoryBoards: production" uuid="82441d3e-deb7-4ddf-85dd-7a0a9c906b22">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:StoryBoards_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

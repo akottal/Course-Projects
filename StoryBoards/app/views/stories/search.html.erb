@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--   stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' true  -->
+  <!-- javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+  <!-- csrf_meta_tags %>-->
+</head>
+<body>
+<div class="container bs-docs-container">
+<h3>Story search results</h3>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Point Value</th>
+    <th>Stage</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= @project.id%>
+  <% @stories.each do |story| %>
+      <tr>
+        <td><%= story.title %></td>
+        <td><%= story.description%></td>
+        <td><%= story.point_value%></td>
+        <td><%= story.stage%></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+    </div>
+</body>
+</html>

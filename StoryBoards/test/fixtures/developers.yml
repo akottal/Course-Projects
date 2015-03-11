@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+first_dev:
+  name: 'Siva'
+  email: 'dev1@ncsu.edu'
+  password_digest: <%= Developer.digest('password')%>
+  story: first_story
+  project: first_project
+
+second_dev:
+  name: 'Teja'
+  email: 'dev2@ncsu.edu'
+  password_digest: <%= Developer.digest('password')%>
+  story: second_story
+  project: second_project

@@ -1,0 +1,17 @@
+<strong>
+  <%= link_to 'Back', :back%> |
+</strong>
+<%if @isAdmin%>
+    <strong>
+    <%= link_to 'Home Page', admins_path%> |
+    </strong>
+<%else%>
+    <strong>
+    <%= link_to 'Home Page', @current_user%> |
+    <%= link_to 'Project Page', @dev_project%> |
+    </strong>
+<%end%>
+<strong>
+<%= link_to 'Logout', logout_path %>
+</strong>
+<br/><br/>

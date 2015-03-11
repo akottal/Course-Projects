@@ -1,0 +1,123 @@
+<p id="notice"><%= notice %></p>
+
+<div class="bs-docs-header" id="content" style="background-color: #878314">
+  <div class="container">
+    <div class="row">
+      <h1 style="font-size: 60px;color:#ffffff;">Project Details</h1>
+    </div>
+  </div>
+</div>
+<br/><br/>
+
+<div class="container bs-docs-container">
+  <strong>
+    <%= link_to 'Edit Project', edit_project_path(@project) %> |
+    <%= link_to 'Back', projects_path %> |
+    <%= link_to 'Logout', logout_path %>
+  </strong><br/><br/>
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+<br/>
+
+<h3>List of Developers</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="3">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @developers.each do |developer| %>
+      <tr>
+        <td><%= developer.name %></td>
+        <td><%= developer.email%></td>
+        <td><strong><%= link_to 'Show', developer, class:"btn btn-primary",style:"color: white" %></strong></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>
+<br/>
+
+<%= form_tag("/search", method: "get") do %>
+    <%= text_field_tag(:q) %>
+    <%= hidden_field_tag(:parent_id, @project.id)%>
+    <%= submit_tag('Search Stories') %>
+<% end %>
+<br/>
+
+<h3>List of uncompleted stories</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Point Value</th>
+    <th>Stage</th>
+    <th colspan="4">Options</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @stories.each do |story| %>
+      <tr>
+        <% unless story.stage == 'Complete' %>
+        <td><%= story.title %></td>
+        <td><%= story.description%></td>
+        <td><%= story.point_value%></td>
+        <td><%= story.stage%></td>
+        <td><strong><%= link_to 'Show', story, class:"btn btn-primary",style:"color: white" %></strong></td>
+        <td><strong><%= link_to 'Edit', edit_story_path(story), class:"btn btn-default" %></strong></td>
+        <td><strong><%= link_to 'Sign Up', sign_up_story_path(story), class:"btn btn-warning" %></strong></td>
+        <td><%= button_to 'Delete', story, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+      <%end%>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>
+<%= link_to 'Create New Story', new_story_path,class:"btn btn-default" %>
+
+
+<h3>Point totals of stories according to stage</h3>
+<table border="1px" class="table">
+  <thead>
+  <tr>
+    <th>Stage</th>
+    <th>Total points</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @stages.each do |stage| %>
+      <tr>
+        <td><%= stage %></td>
+        <td><%= @totals[stage] %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+<br/>
+<br/>
+<!-- From within the view file -->
+<img src="<%= @graph %>"/>
+
+<br/>
+<br/>
+<strong>
+<%= link_to 'Edit Project', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %> |
+<%= link_to 'Logout', logout_path %>
+</strong>
+
+    </div>

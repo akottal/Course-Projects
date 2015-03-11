@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 'Siva'
+  email: 'admin@ncsu.edu'
+  password_digest: <%= Admin.digest('password')%>
+
+two:
+  name: 'Teja'
+  email: 'admin2@ncsu.edu'
+  password_digest: <%= Admin.digest('password')%>

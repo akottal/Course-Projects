@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+first_story:
+  title: 'Story 1'
+  description: 'This is story 1'
+  point_value: 1.5
+  stage: 'Analysis'
+  project: first_project
+
+second_story:
+  title: 'Story 2'
+  description: 'This is story 2'
+  point_value: 1.5
+  stage: 'Analysis'
+  project: second_project
